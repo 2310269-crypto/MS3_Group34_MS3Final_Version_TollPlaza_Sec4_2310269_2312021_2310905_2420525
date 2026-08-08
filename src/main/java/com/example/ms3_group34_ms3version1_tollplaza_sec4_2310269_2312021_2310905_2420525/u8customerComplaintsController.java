@@ -1,11 +1,15 @@
 package com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -41,7 +45,7 @@ public class u8customerComplaintsController {
                 return;
             }
 
-            // TODO: match this constructor to your ACTUAL Complaint.java field order
+
             u8Complaint newComplaint = new u8Complaint(name, number, tollTranID, details, date);
 
 
@@ -52,7 +56,7 @@ public class u8customerComplaintsController {
 
         private void appendToTxt(u8Complaint c) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(COMPLAINTS_FILE, true))) {
-                // TODO: match this line to your ACTUAL Complaint getters
+
                 writer.write(c.getName() + "," + c.getNumber() + "," + c.getTollTransactionID()
                         + "," + c.getDetails() + "," + c.getDate());
                 writer.newLine();
@@ -67,5 +71,17 @@ public class u8customerComplaintsController {
             u8complaintTollTranIDTF.clear();
             u8complaintDetailsTF.clear();
             u8complaintdateTF.clear();
-        }}
+        }
+
+    @FXML
+    public void u8sComplaintMainPageBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("user8MainPage.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Customer complaints");
+        stage.show();
+    }
+}
 

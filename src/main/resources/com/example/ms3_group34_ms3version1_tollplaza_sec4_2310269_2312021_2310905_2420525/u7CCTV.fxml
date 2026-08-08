@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -19,5 +20,10 @@
       <DatePicker fx:id="datePickerCB" layoutX="95.0" layoutY="95.0" />
       <ComboBox fx:id="laneNumberCB" layoutX="406.0" layoutY="61.0" prefWidth="150.0" />
       <ComboBox fx:id="cameraLocationCB" layoutX="407.0" layoutY="102.0" prefWidth="150.0" />
+      <Button layoutX="507.0" layoutY="25.0" mnemonicParsing="false" onAction="#backToMP4BOA" text="back to Main Page">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

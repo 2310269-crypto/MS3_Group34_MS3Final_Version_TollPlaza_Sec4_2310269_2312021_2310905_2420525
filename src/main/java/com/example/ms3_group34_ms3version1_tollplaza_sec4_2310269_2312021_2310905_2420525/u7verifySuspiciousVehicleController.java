@@ -1,9 +1,16 @@
 package com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class u7verifySuspeciousVehicleController {
+import java.io.IOException;
+
+public class u7verifySuspiciousVehicleController {
     public void setDriverNameTF(TextField driverNameTF) {
         this.driverNameTF = driverNameTF;
     }
@@ -25,7 +32,7 @@ public class u7verifySuspeciousVehicleController {
     @javafx.fxml.FXML
     private Label blacklistVehicleLabel;
 
-    public u7verifySuspeciousVehicleController(TextField driverLicenseNoTF, TextField vehicleTypeTF, TextField vehicleLicenseNoTF, TextField driverNameTF, Label blacklistVehicleLabel) {
+    public u7verifySuspiciousVehicleController(TextField driverLicenseNoTF, TextField vehicleTypeTF, TextField vehicleLicenseNoTF, TextField driverNameTF, Label blacklistVehicleLabel) {
         this.driverLicenseNoTF = driverLicenseNoTF;
         this.vehicleTypeTF = vehicleTypeTF;
         this.vehicleLicenseNoTF = vehicleLicenseNoTF;
@@ -39,4 +46,15 @@ public class u7verifySuspeciousVehicleController {
     private TextField vehicleTypeTF;
     @javafx.fxml.FXML
     private TextField vehicleLicenseNoTF;
+
+    @javafx.fxml.FXML
+    public void backToMP3BOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("user7MainPage.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Suspicious Vehicle");
+        stage.show();
+    }
 }

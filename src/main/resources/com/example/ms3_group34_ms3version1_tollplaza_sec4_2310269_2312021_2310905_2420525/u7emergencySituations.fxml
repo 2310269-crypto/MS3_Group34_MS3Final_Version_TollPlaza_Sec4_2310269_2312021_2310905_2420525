@@ -8,7 +8,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.u7emergencySituationsController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dd0000" height="101.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
@@ -30,5 +29,10 @@
       <TextField fx:id="emergencyTypeTF" layoutX="135.0" layoutY="215.0" />
       <Label layoutX="302.0" layoutY="219.0" text="Specific location" />
       <TextField fx:id="emergencyLocationTF" layoutX="396.0" layoutY="215.0" />
+      <Button layoutX="487.0" layoutY="11.0" mnemonicParsing="false" onAction="#backToMP2BOA" text="back to Main Page">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

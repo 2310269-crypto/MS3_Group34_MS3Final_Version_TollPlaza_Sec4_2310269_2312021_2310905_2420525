@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.u8tollRefundController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c4cfbe;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.u8tollRefundController">
+   <children>
+      <Label layoutX="33.0" layoutY="22.0" prefHeight="53.0" prefWidth="187.0" text="Toll Refund">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="81.0" text="Customer Name" />
+      <Label layoutX="33.0" layoutY="121.0" text="Customer Number" />
+      <Label layoutX="30.0" layoutY="161.0" text="Toll Transaction ID :" />
+      <Label layoutX="33.0" layoutY="200.0" text="Date :" />
+      <TextField fx:id="u8tollRefundCnameTF" layoutX="132.0" layoutY="77.0" />
+      <TextField fx:id="u8tollRefundCnumberTF" layoutX="143.0" layoutY="117.0" />
+      <TextField fx:id="u8tollRefundTranIDTF" layoutX="146.0" layoutY="157.0" />
+      <TextField fx:id="u8tollRefundDateTF" layoutX="71.0" layoutY="196.0" />
+      <Button layoutX="117.0" layoutY="241.0" mnemonicParsing="false" onAction="#u8tollRefundSearchBOA" prefHeight="61.0" prefWidth="105.0" text="SEARCH">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="u8tollRefundHistoryLabel" layoutX="314.0" layoutY="98.0" prefHeight="227.0" prefWidth="251.0" style="-fx-background-color: #e0e0e0;" />
+      <Label layoutX="323.0" layoutY="66.0" prefHeight="25.0" prefWidth="207.0" text="Toll Transaction history">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button layoutX="463.0" layoutY="22.0" mnemonicParsing="false" onAction="#u8tollRefundMainPageBOA" prefHeight="32.0" prefWidth="87.0" text="MAIN PAGE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

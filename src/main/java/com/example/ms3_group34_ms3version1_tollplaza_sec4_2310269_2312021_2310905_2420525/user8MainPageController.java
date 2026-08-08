@@ -2,10 +2,13 @@ package com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_23109
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class user8MainPageController {
     @FXML
@@ -44,50 +47,57 @@ public class user8MainPageController {
         U8vehicleTypeCB.setOnAction(e -> outputLaneaAndFare());
         U8locationCB.setOnAction(e -> outputLaneaAndFare());
     }
-        private void outputLaneaAndFare () {
-            String vehicle = U8vehicleTypeCB.getValue();
-            String location = U8locationCB.getValue();
+    private void outputLaneaAndFare () {
+        String vehicle = U8vehicleTypeCB.getValue();
+        String location = U8locationCB.getValue();
 
-            if (vehicle == null || location == null) return;
+        if (vehicle == null || location == null) return;
 
-            U8laneNumberLabel.setText(outputLaneNumber(vehicle, location));
-            U8fareLabel.setText(outputFare(vehicle, location) + " tk");
+        U8laneNumberLabel.setText(outputLaneNumber(vehicle, location));
+        U8fareLabel.setText(outputFare(vehicle, location) + " tk");
 
+    }
+
+
+    private String outputLaneNumber(String vehicle,String location) {
+        String lane = null;
+        if (location.equals("Mawa")) {
+            lane = "1";
+        }
+        if (location.equals("Janjira")) {
+            lane = "3";
+        }
+        return lane;
+    }
+
+    private String outputFare(String vehicle,String location) {
+        String fare = null;
+        if (vehicle.equals("Car")) {
+            fare = "750";
+        }
+        if (vehicle.equals("Bus")) {
+            fare = "1900";
+        }
+        if (vehicle.equals("Bike")) {
+            fare = "100";
+        }
+        if (vehicle.equals("Truck")) {
+            fare = "3500";
         }
 
 
-        private String outputLaneNumber(String vehicle,String location) {
-            String lane = null;
-                if (location.equals("Mawa")) {
-                    lane = "1";
-                }
-                if (location.equals("Janjira")) {
-                    lane = "3";
-                }
-                return lane;
-            }
-
-        private String outputFare(String vehicle,String location) {
-            String fare = null;
-                if (vehicle.equals("Car")) {
-                    fare = "750";
-                }
-                if (vehicle.equals("Bus")) {
-                    fare = "1900";
-                }
-                if (vehicle.equals("Bike")) {
-                    fare = "100";
-                }
-                if (vehicle.equals("Truck")) {
-                    fare = "3500";
-                }
-
-
-                return fare;
-            }
+        return fare;
+    }
 
     @FXML
-    public void U8lostReceiptsBOA(ActionEvent actionEvent) {
+    public void U8lostReceiptsBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u8lostReceipt.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Customer complaints");
+        stage.show();
     }
 
     @FXML
@@ -103,23 +113,30 @@ public class user8MainPageController {
     }
 
     @FXML
-    public void U8customerComplaintBOA(ActionEvent actionEvent) {
+    public void U8customerComplaintBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u8customerComplaints.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Customer complaints");
+        stage.show();
     }
 
-    @FXML
-    public void U8tollRefundsBOA(ActionEvent actionEvent) {
-    }
 
-    @FXML
-    public void U8vipVehiclesBOA(ActionEvent actionEvent) {
-    }
+@FXML
+public void U8tollRefundsBOA(ActionEvent actionEvent) throws IOException {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("u8tollRefund.fxml"));
+    Scene scene = new Scene(loader.load());
+
+    Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+    stage.setScene(scene);
+    stage.setTitle("Customer complaints");
+    stage.show();
 }
 
 
-
-
-
-
-
-
+@FXML
+public void U8vipVehiclesBOA(ActionEvent actionEvent) {
+}}
 

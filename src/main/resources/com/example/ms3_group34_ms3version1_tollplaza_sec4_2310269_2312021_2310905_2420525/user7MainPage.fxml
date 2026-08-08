@@ -6,18 +6,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.user7MainPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fccccc;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.user7MainPageController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe5ba" height="246.0" layoutX="244.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe5ba" height="332.0" layoutX="8.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Label layoutX="41.0" layoutY="23.0" text="Name">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff1f1" height="246.0" layoutX="244.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff1f1" height="332.0" layoutX="8.0" layoutY="58.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Label layoutX="21.0" layoutY="14.0" prefHeight="43.0" prefWidth="174.0" text="Security Officer">
          <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="483.0" layoutY="21.0" text="Security Officer">
-         <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="21.0" />
          </font></Label>
       <Button layoutX="277.0" layoutY="178.0" mnemonicParsing="false" onAction="#U7suspeciousVehicleBOA" prefHeight="57.0" prefWidth="131.0" text="Suspecious Vehicle" textAlignment="CENTER" wrapText="true" />
       <Button layoutX="42.0" layoutY="113.0" mnemonicParsing="false" onAction="#U7unauthorizedLaneAccessBOA" prefHeight="57.0" prefWidth="131.0" text="Unauthorized lane access " textAlignment="CENTER" wrapText="true" />

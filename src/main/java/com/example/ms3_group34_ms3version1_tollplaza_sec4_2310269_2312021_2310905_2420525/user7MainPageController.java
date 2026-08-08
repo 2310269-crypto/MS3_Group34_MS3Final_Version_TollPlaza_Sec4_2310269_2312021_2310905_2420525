@@ -24,30 +24,80 @@ public class user7MainPageController {
     }
 
     @javafx.fxml.FXML
-    public void U7incidentReportBOA(ActionEvent actionEvent) {
+    public void U7incidentReportBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7manageIncidentReport.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Incident Report");
+        stage.show();
+    }
+
+
+    @javafx.fxml.FXML
+    public void U7suspeciousVehicleBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7verifySuspeciousVehicle.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Suspicious Vehicle");
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void U7suspeciousVehicleBOA(ActionEvent actionEvent) {
+    public void U7staffAccessBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7verifyStaffAccess.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Verify Staff Access");
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void U7staffAccessBOA(ActionEvent actionEvent) {
+    public void U7emergencyBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7emergencySituations.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Emergency");
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void U7emergencyBOA(ActionEvent actionEvent) {
+    public void U7reportBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7securityReport.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Security Report");
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void U7reportBOA(ActionEvent actionEvent) {
+    public void U7cctvBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7CCTV.fxml"));
+        Scene scene = new Scene(loader.load());
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("CCTV");
+        stage.show();
     }
 
     @javafx.fxml.FXML
-    public void U7cctvBOA(ActionEvent actionEvent) {
-    }
+    public void U7unauthorizedLaneAccessBOA(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("u7unauthorizedLaneAccess.fxml"));
+        Scene scene = new Scene(loader.load());
 
-    @javafx.fxml.FXML
-    public void U7unauthorizedLaneAccessBOA(ActionEvent actionEvent) {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Unauthorized Lane");
+        stage.show();
     }
 }
