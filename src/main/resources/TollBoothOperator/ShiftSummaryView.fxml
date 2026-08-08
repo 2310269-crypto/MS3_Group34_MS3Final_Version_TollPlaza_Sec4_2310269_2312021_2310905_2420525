@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="528.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TollPlazaBoothOperator.ShiftSummaryViewController">
+   <children>
+      <DatePicker fx:id="ShiftDateDP" layoutX="147.0" layoutY="25.0" />
+      <Button layoutX="200.0" layoutY="77.0" mnemonicParsing="false" onAction="#CalculateTotalsessionsButtonOA" prefHeight="25.0" prefWidth="142.0" text="Calculate Total Sessions" />
+      <TableView fx:id="TableView" layoutX="173.0" layoutY="158.0" prefHeight="228.0" prefWidth="390.0">
+        <columns>
+          <TableColumn prefWidth="135.0" text="Payment Mode" />
+          <TableColumn prefWidth="142.0" text="Vehicle Count" />
+            <TableColumn minWidth="0.0" prefWidth="112.0" text="Total Amount" />
+        </columns>
+      </TableView>
+      <CheckBox fx:id="BalanceVerifiedCB" layoutX="216.0" layoutY="417.0" mnemonicParsing="false" text="Balance Verified" />
+      <Button layoutX="524.0" layoutY="405.0" mnemonicParsing="false" onAction="#SaveShiftLogButtonOA" prefHeight="67.0" prefWidth="136.0" text="Save Shift Log" />
+      <Label layoutX="66.0" layoutY="29.0" text="Shift Date:" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="346.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TollPlazaBoothOperator.CashTollViewController">
+   <children>
+      <Label layoutX="217.0" layoutY="14.0" prefHeight="38.0" prefWidth="158.0" style="-fx-background-color: blue;" text="Manual Cash Toll Processing" textFill="#f8f0f0" />
+      <ComboBox layoutX="136.0" layoutY="91.0" onAction="#SelectVehicleClassCB" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="95.0" text="Select Vehicle Class:" />
+      <TextField fx:id="EnterCashinBdtTF" layoutX="459.0" layoutY="91.0" />
+      <Label layoutX="311.0" layoutY="95.0" text="Enter Cash Received in Bdt:" />
+      <Button layoutX="215.0" layoutY="161.0" mnemonicParsing="false" onAction="#ProcessTransactionAndRaiseGateButtonOA" text="Process Transaction &amp; Raise Gate" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="342.0" layoutY="193.0" mnemonicParsing="false" onAction="#DailyOperationsButtonOA" text="Daily Operations" />
+      <Button layoutX="165.0" layoutY="228.0" mnemonicParsing="false" onAction="#IncidentManagementButtonOA" text="Incident Management" />
+      <Button layoutX="161.0" layoutY="193.0" mnemonicParsing="false" onAction="#ViolationsandExceptionsButtonOA" text="Violations and Exceptions" />
+      <Button layoutX="473.0" layoutY="193.0" mnemonicParsing="false" onAction="#EquipmentHealthButtonOA" text="Equipment Health" />
+      <Button layoutX="45.0" layoutY="193.0" mnemonicParsing="false" onAction="#StaffandShiftsButtonOA" text="Staff and Shifts" />
+      <Button layoutX="325.0" layoutY="228.0" mnemonicParsing="false" onAction="#RevenueReconciliationButtonOA" text="Revenue Reconciliation" />
+      <Button layoutX="48.0" layoutY="228.0" mnemonicParsing="false" onAction="#MISReportsButtonOA" text="MIS Reports" />
+      <Button layoutX="486.0" layoutY="228.0" mnemonicParsing="false" onAction="#TollRateSettingsButtonOA" text="Toll Rate Settings" />
+      <ComboBox fx:id="SelectManagerIdCB" layoutX="157.0" layoutY="72.0" prefWidth="150.0" />
+      <Label layoutX="39.0" layoutY="76.0" text="Select Manager Id:" />
+      <Button layoutX="165.0" layoutY="126.0" mnemonicParsing="false" onAction="#LogInButtonOA" text="Log In" />
+      <Button layoutX="237.0" layoutY="291.0" mnemonicParsing="false" onAction="#LogOutButtonOA" text="Log Out" />
+      <TextArea layoutX="141.0" layoutY="14.0" prefHeight="25.0" prefWidth="225.0" text="Manager Dashboard" />
+   </children>
+</AnchorPane>
