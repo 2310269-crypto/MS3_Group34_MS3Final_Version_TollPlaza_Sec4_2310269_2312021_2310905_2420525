@@ -7,10 +7,9 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TollPlazaManager.StaffShiftViewController">
    <children>
-      <TableView layoutX="86.0" layoutY="60.0" prefHeight="182.0" prefWidth="389.0">
+      <TableView fx:id="TableView" layoutX="86.0" layoutY="60.0" prefHeight="182.0" prefWidth="389.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Staff ID" />
           <TableColumn prefWidth="104.0" text="Staff Name" />
@@ -19,13 +18,13 @@
             <TableColumn prefWidth="32.0" text="C2" />
         </columns>
       </TableView>
-      <ComboBox layoutX="131.0" layoutY="265.0" prefWidth="150.0" />
+      <ComboBox fx:id="AssignedLaneCB" layoutX="131.0" layoutY="265.0" prefWidth="150.0" />
       <Label layoutX="49.0" layoutY="267.0" />
       <Label layoutX="49.0" layoutY="267.0" text="Assigned Lane:" />
       <Label layoutX="383.0" layoutY="269.0" text="Shift Timing:" />
-      <ComboBox layoutX="450.0" layoutY="265.0" prefWidth="150.0" />
-      <ComboBox layoutX="131.0" layoutY="301.0" prefWidth="150.0" />
+      <ComboBox layoutX="450.0" layoutY="265.0" onAction="#ShiftTimingCB" prefWidth="150.0" />
+      <ComboBox layoutX="131.0" layoutY="301.0" onAction="#StaffListCB" prefWidth="150.0" />
       <Label layoutX="65.0" layoutY="305.0" text="Staff List:" />
-      <Button layoutX="357.0" layoutY="305.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="157.0" text="Validate and Assign Shift" />
+      <Button layoutX="357.0" layoutY="305.0" mnemonicParsing="false" onAction="#ValidateandAssignShift" prefHeight="43.0" prefWidth="157.0" text="Validate and Assign Shift" />
    </children>
 </AnchorPane>

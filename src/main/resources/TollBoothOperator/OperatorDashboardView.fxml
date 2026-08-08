@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TollPlazaBoothOperator.OperatorDashboardViewController">
    <children>
-      <Label layoutX="183.0" layoutY="24.0" prefHeight="41.0" prefWidth="199.0" text="Welcome To Operator Dashboard" />
+      <Label layoutX="175.0" layoutY="7.0" prefHeight="41.0" prefWidth="199.0" style="-fx-background-color: blue;" text="Welcome To Operator Dashboard" textFill="#f5efef" />
+      <Button layoutX="248.0" layoutY="350.0" mnemonicParsing="false" onAction="#LogoutOA" text="Log Out" />
+      <Button layoutX="20.0" layoutY="110.0" mnemonicParsing="false" onAction="#ProcessCashTollButtonOA" text="Process Cash Toll" />
+      <Button layoutX="190.0" layoutY="175.0" mnemonicParsing="false" onAction="#ShiftSummaryButtonOA" text="Shift Summary" />
+      <Button layoutX="172.0" layoutY="110.0" mnemonicParsing="false" onAction="#DigitalWalletButtonOA" text="Digital Wallet" />
+      <Button layoutX="41.0" layoutY="175.0" mnemonicParsing="false" onAction="#ReportMalfunctionButtonOA" text="Report Malfunction" />
+      <Button layoutX="294.0" layoutY="110.0" mnemonicParsing="false" onAction="#EmergencyExemptionButtonOA" text="Emergency Exemption" />
+      <Button layoutX="322.0" layoutY="175.0" mnemonicParsing="false" onAction="#OvweWeightButtonOA" text="Over Weight Check" />
+      <Button layoutX="458.0" layoutY="175.0" mnemonicParsing="false" onAction="#ManualRFIDCheckButtonOA" text="Manual RFID Check" />
+      <Button layoutX="447.0" layoutY="110.0" mnemonicParsing="false" onAction="#ManualGateOverrideButtonOA" text="Manual Gate Override" />
+      <Button layoutX="231.0" layoutY="60.0" mnemonicParsing="false" onAction="#LoginButtonOA" text="Login" />
    </children>
 </AnchorPane>

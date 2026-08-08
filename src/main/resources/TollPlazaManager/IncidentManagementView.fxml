@@ -8,14 +8,13 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="515.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TollPlazaManager.IncidentManagementViewController">
    <children>
-      <TextField layoutX="119.0" layoutY="30.0" />
-      <ComboBox layoutX="428.0" layoutY="30.0" prefWidth="150.0" />
+      <TextField fx:id="IncidentTitleTF" layoutX="119.0" layoutY="30.0" />
+      <ComboBox fx:id="selectPriorityLevelCB" layoutX="428.0" layoutY="30.0" prefWidth="150.0" />
       <Label layoutX="31.0" layoutY="35.0" text="Incident Title:" />
       <Label layoutX="313.0" layoutY="35.0" text="Select Priority Level:" />
-      <TableView layoutX="102.0" layoutY="150.0" prefHeight="197.0" prefWidth="455.0">
+      <TableView fx:id="TableView" layoutX="102.0" layoutY="150.0" prefHeight="197.0" prefWidth="455.0">
         <columns>
           <TableColumn prefWidth="109.0" text="Incident ID " />
           <TableColumn prefWidth="86.0" text="Location " />
@@ -23,8 +22,8 @@
             <TableColumn prefWidth="140.0" text="Status" />
         </columns>
       </TableView>
-      <ComboBox layoutX="119.0" layoutY="373.0" prefWidth="150.0" />
+      <ComboBox fx:id="UpdtaeStatusCB" layoutX="119.0" layoutY="373.0" prefWidth="150.0" />
       <Label layoutX="25.0" layoutY="377.0" text="Update Status:" />
-      <Button layoutX="443.0" layoutY="373.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="192.0" text="Close Incident and Save Log" />
+      <Button layoutX="443.0" layoutY="373.0" mnemonicParsing="false" onAction="#CloseIncidentandSaveLogButtonOA" prefHeight="57.0" prefWidth="192.0" text="Close Incident and Save Log" />
    </children>
 </AnchorPane>

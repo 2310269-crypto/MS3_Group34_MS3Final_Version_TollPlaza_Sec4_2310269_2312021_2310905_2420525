@@ -8,15 +8,14 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="480.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TollPlazaManager.ViolationReportsViewController">
    <children>
-      <ComboBox layoutX="107.0" layoutY="41.0" prefWidth="150.0" />
-      <DatePicker layoutX="387.0" layoutY="41.0" />
-      <Button layoutX="300.0" layoutY="87.0" mnemonicParsing="false" text="Filter" />
+      <ComboBox fx:id="VoilationTypeCB" layoutX="107.0" layoutY="41.0" prefWidth="150.0" />
+      <DatePicker fx:id="SelectdateDp" layoutX="387.0" layoutY="41.0" />
+      <Button layoutX="300.0" layoutY="87.0" mnemonicParsing="false" onAction="#FilterButtonOA" text="Filter" />
       <Label layoutX="14.0" layoutY="45.0" text="Violation Type:" />
       <Label layoutX="312.0" layoutY="45.0" text="Select Date:" />
-      <TableView layoutX="43.0" layoutY="136.0" prefHeight="200.0" prefWidth="504.0">
+      <TableView fx:id="TableView" layoutX="43.0" layoutY="136.0" prefHeight="200.0" prefWidth="504.0">
         <columns>
           <TableColumn prefWidth="114.0" text="Violation Id" />
           <TableColumn prefWidth="96.0" text="Lane" />
@@ -25,8 +24,8 @@
             <TableColumn prefWidth="96.0" text="Status" />
         </columns>
       </TableView>
-      <ComboBox layoutX="182.0" layoutY="360.0" prefWidth="150.0" />
-      <Button layoutX="153.0" layoutY="405.0" mnemonicParsing="false" text="Submit Action" />
+      <ComboBox fx:id="SelectActionCB" layoutX="182.0" layoutY="360.0" prefWidth="150.0" />
+      <Button layoutX="153.0" layoutY="405.0" mnemonicParsing="false" onAction="#SubmitActionButtonOA" text="Submit Action" />
       <Label layoutX="71.0" layoutY="364.0" text="Select Action:" />
    </children>
 </AnchorPane>
