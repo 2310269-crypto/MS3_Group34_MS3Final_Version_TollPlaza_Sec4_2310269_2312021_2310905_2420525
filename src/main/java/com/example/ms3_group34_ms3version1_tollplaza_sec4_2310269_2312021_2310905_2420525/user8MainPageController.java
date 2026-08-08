@@ -1,5 +1,6 @@
 package com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -34,21 +35,7 @@ public class user8MainPageController {
 
 
 
-    @Override
-    public String toString() {
-        return "user8MainPageController{" +
-                "U8createReportBOA=" + U8createReportBOA +
-                ", U8lostReceiptsBOA=" + U8lostReceiptsBOA +
-                ", U8laneNumberLabel=" + U8laneNumberLabel +
-                ", U8fareLabel=" + U8fareLabel +
-                ", U8customerProfileRegisterBOA=" + U8customerProfileRegisterBOA +
-                ", U8customerProfileUpdateBOA=" + U8customerProfileUpdateBOA +
-                ", U8customerComplaintBOA=" + U8customerComplaintBOA +
-                ", U8tollRefundsBOA=" + U8tollRefundsBOA +
-                ", U8vipVehiclesBOA=" + U8vipVehiclesBOA +
-                ", U8locationCB=" + U8locationCB +
-                '}';
-    }
+
     @FXML
     public  void initialize() {
         U8vehicleTypeCB.getItems().addAll("Car", "Bike", "Bus", "Truck");
