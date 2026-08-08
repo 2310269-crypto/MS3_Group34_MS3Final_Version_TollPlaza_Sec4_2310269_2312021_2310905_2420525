@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.TrafficMonitoringOfficer.Controller.TrafficLiveMonitor">
+   <children>
+      <Label layoutX="248.0" layoutY="20.0" text="Live Monitor">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="117.0" layoutY="58.0" mnemonicParsing="false" onAction="#refreshTrafficButton" prefHeight="25.0" prefWidth="348.0" text="Refresh Traffic Data" />
+      <Label fx:id="lastUpdatedLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="93.0" prefHeight="17.0" prefWidth="523.0" text="Last Updated Time" />
+      <TableView fx:id="trafficFlowTableView" layoutX="15.0" layoutY="125.0" prefHeight="200.0" prefWidth="571.0">
+        <columns>
+          <TableColumn fx:id="laneIdColumn" prefWidth="92.0" text="Lane ID" />
+          <TableColumn fx:id="vehicleCountColumn" prefWidth="94.0" text="Vehicle Count" />
+            <TableColumn fx:id="queueLengthColumn" prefWidth="108.0" text="Queue Length" />
+            <TableColumn fx:id="waitingTimeColumn" prefWidth="104.0" text="Waiting Time" />
+            <TableColumn fx:id="throughputColumn" prefWidth="81.0" text="Throughput" />
+            <TableColumn fx:id="laneStatusColumn" prefWidth="91.0" text="Lane Status" />
+        </columns>
+      </TableView>
+      <Label fx:id="congestionAlertLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="349.0" prefHeight="17.0" prefWidth="523.0" text="Congestion Alert" />
+      <Button layoutX="46.0" layoutY="424.0" mnemonicParsing="false" onAction="#backBtnOA" text="Back" />
+      <Button layoutX="501.0" layoutY="424.0" mnemonicParsing="false" onAction="#logoutBtnOA" text="Logout" />
+   </children>
+</AnchorPane>

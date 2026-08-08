@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.Accountant.Controller.MonthlyProfitLossReport">
+   <children>
+      <Label layoutX="216.0" layoutY="24.0" text="Monthly Profit and Loss Report">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDateDP" layoutX="104.0" layoutY="64.0" />
+      <DatePicker fx:id="endDateDP" layoutX="104.0" layoutY="99.0" />
+      <Text layoutX="24.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:" />
+      <Text layoutX="26.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Date:" />
+      <Button layoutX="409.0" layoutY="99.0" mnemonicParsing="false" onAction="#generateReportBtnOA" text="Generate Report" />
+      <Text layoutX="26.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Report Description:" />
+      <TextArea fx:id="reportDescriptionTA" layoutX="136.0" layoutY="140.0" prefHeight="117.0" prefWidth="200.0" />
+      <Button layoutX="499.0" layoutY="348.0" mnemonicParsing="false" onAction="#logoutBtnOA" text="Logout" />
+      <Button layoutX="31.0" layoutY="350.0" mnemonicParsing="false" onAction="#backBtnOA" text="Back" />
+      <Button layoutX="409.0" layoutY="232.0" mnemonicParsing="false" onAction="#exportReportBtnOA" text="Export Report" />
+   </children>
+</AnchorPane>

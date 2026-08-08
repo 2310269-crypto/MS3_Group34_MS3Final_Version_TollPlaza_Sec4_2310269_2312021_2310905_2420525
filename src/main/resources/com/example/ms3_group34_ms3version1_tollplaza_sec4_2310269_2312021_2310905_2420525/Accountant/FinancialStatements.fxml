@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.Accountant.Controller.FinancialStatements">
+   <children>
+      <Text layoutX="37.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statement Type:" />
+      <Text layoutX="45.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Period:" />
+      <Text layoutX="26.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statement Preview:" />
+      <ComboBox fx:id="statementTypeCB" layoutX="136.0" layoutY="38.0" prefWidth="150.0" />
+      <ComboBox fx:id="periodCB" layoutX="136.0" layoutY="78.0" prefWidth="150.0" />
+      <Button layoutX="17.0" layoutY="361.0" mnemonicParsing="false" onAction="#backBtnOA" text="Back" />
+      <Button layoutX="501.0" layoutY="361.0" mnemonicParsing="false" onAction="#logoutBtnOA" text="Log Out" />
+      <Button layoutX="390.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateStatementBtnOA" text="Generate Statement" />
+      <TextArea fx:id="statementPreviewTA" layoutX="136.0" layoutY="135.0" prefHeight="133.0" prefWidth="200.0" />
+      <Label layoutX="198.0" layoutY="6.0" prefHeight="17.0" prefWidth="136.0" text="Financial Statements">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="390.0" layoutY="243.0" mnemonicParsing="false" onAction="#exportDownloadBtnOA" text="Export/Download" />
+      <ComboBox fx:id="exportFormatCB" layoutX="426.0" layoutY="38.0" prefWidth="150.0" />
+      <Text layoutX="336.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Export Format:" />
+      <Label fx:id="statusMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="300.0" prefHeight="17.0" prefWidth="200.0" text="Status Message" />
+   </children>
+</AnchorPane>

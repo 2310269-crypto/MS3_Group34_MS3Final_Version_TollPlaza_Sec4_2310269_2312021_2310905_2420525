@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="457.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ms3_group34_ms3version1_tollplaza_sec4_2310269_2312021_2310905_2420525.TrafficMonitoringOfficer.Controller.TrafficControlSchedule">
+   <children>
+      <Label layoutX="230.0" layoutY="21.0" text="Traffic Control Schedue">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="trafficScheduleTableView" layoutX="22.0" layoutY="64.0" prefHeight="200.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="scheduleDateColumn" prefWidth="114.0" text="Schedule Date" />
+          <TableColumn fx:id="shiftColumn" prefWidth="90.0" text="Shift" />
+            <TableColumn fx:id="laneColumn" prefWidth="88.0" text="Lane" />
+            <TableColumn fx:id="assignedOfficerColumn" prefWidth="146.0" text="Assigned Officer" />
+            <TableColumn fx:id="scheduleStatusColumn" prefWidth="111.0" text="Schedule Status" />
+        </columns>
+      </TableView>
+      <Text layoutX="22.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule Date:" />
+      <DatePicker fx:id="scheduleDatePicker" layoutX="134.0" layoutY="278.0" />
+      <ComboBox fx:id="shiftComboBox" layoutX="422.0" layoutY="278.0" prefWidth="150.0" />
+      <ComboBox fx:id="laneComboBox" layoutX="422.0" layoutY="310.0" prefWidth="150.0" />
+      <Text layoutX="373.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shift:" />
+      <Text layoutX="375.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lane:" />
+      <ComboBox fx:id="assignedOfficerComboBox" layoutX="134.0" layoutY="310.0" prefWidth="150.0" />
+      <Text layoutX="16.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assigned Officer:" />
+      <Button layoutX="142.0" layoutY="346.0" mnemonicParsing="false" onAction="#saveScheduleButton" prefHeight="25.0" prefWidth="249.0" text="Save Schedule" />
+      <Button layoutX="534.0" layoutY="418.0" mnemonicParsing="false" onAction="#logoutBtnOA" text="Logout" />
+      <Button layoutX="14.0" layoutY="418.0" mnemonicParsing="false" onAction="#backBtnOA" text="Back" />
+      <Label fx:id="statusLabel" alignment="CENTER" layoutX="26.0" layoutY="380.0" prefHeight="17.0" prefWidth="550.0" text="Status Message" />
+   </children>
+</AnchorPane>
